@@ -11,7 +11,7 @@ def check_secret_code(user):
     print("Enter your secret code:")
     secretCode = input()
     atmpts = 4
-    while secretCode != user["secretcode"] and attempts > 0:
+    while secretCode != user["secretcode"] and atmpts > 0:
         print("Incorrect! try again:")
         atmpts -= 1
         secretCode = input()
@@ -44,7 +44,7 @@ def change_secret_code(user):
 def main():
 
     functions = {"1": print_user_balance, "2": get_money, "3": change_secret_code}
-	user = {"secretcode": "5273", "balance": 67200,}
+    user = {"secretcode": "5273", "balance": 67200}
 
     if not check_secret_code(user):
         print("Too many failed attempts, your are blocked.")
