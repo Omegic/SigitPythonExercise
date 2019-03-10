@@ -1,0 +1,2 @@
+# SigitPythonExercise
+Exercise for sigit
